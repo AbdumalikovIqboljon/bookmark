@@ -21,7 +21,7 @@
     letter-spacing: 1.5px;
     color: #fff;
     text-decoration: none;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
     &:hover{
         color: $button-bg-danger;
@@ -31,24 +31,14 @@
     @include d-f;
     margin-left: auto;
 }
-.social-networks__item {
-    &--facebook{
-        margin-right: 40px;
-    }
-    svg {
-        display: block;
-        width: 24px;
-        height: 24px;
-    }
-
-    &:hover{
-        svg{
-            path{
-                fill: $button-bg-danger;
-            }
-        }
-    }
-
+.social-networks__item:first-child {
+    margin-right: 40px;
+}
+.social-networks__item svg path {
+    transition: fill 0.2s linear;
+}
+.social-networks__item:hover svg path {
+    fill: $button-bg-danger;
 }
 
 @include breakpoint-down(730px) {
